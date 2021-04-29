@@ -1,5 +1,6 @@
 package car
 
+//go:generate stringer -type=Brand
 type Brand int
 
 const (

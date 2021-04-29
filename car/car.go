@@ -3,9 +3,9 @@ package car
 import "fmt"
 
 type Car struct {
-	Brand Brand
-	Color Color
-	Model string
+	Brand Brand  `json:"brand,omitempty"`
+	Color Color  `json:"color,omitempty"`
+	Model string `json:"model,omitempty"`
 }
 
 func New(brand Brand, color Color, model string) *Car {

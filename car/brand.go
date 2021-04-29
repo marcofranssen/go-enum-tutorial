@@ -13,3 +13,7 @@ const (
 	Porsche
 	Ferrari
 )
+
+func (b Brand) MarshalText() ([]byte, error) {
+	return []byte(b.String()), nil
+}

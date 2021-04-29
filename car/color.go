@@ -8,3 +8,7 @@ const (
 	Gray
 	Red
 )
+
+func (c Color) MarshalText() ([]byte, error) {
+	return []byte(c.String()), nil
+}

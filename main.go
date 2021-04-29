@@ -20,4 +20,14 @@ func main() {
 		return
 	}
 	fmt.Println(string(carsJSON))
+
+	porscheJSON := []byte(`{"brand":"porsche","color":"White","model":"Taycan"}`)
+	var porsche car.Car
+	err = json.Unmarshal(porscheJSON, &porsche)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Printf("Another Car I love: %s\n", porsche)
 }
